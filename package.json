@@ -6,7 +6,15 @@
   "scripts": {
     "test": "jest",
     "lint": "flow && documentation lint index.js",
-    "docs": "documentation build index.js -o docs --config documentation.yml -f html"
+    "docs": "documentation build index.js -o docs --config documentation.yml -f html",
+    "publish:patch": "run-s version:patch git:push",
+    "publish:minor": "run-s version:minor git:push",
+    "publish:major": "run-s version:major git:push",
+    "publish:prepatch": "run-s version:prepatch git:push",
+    "version:patch": "yarn version --new-version patch",
+    "version:minor": "yarn version --new-version minor",
+    "version:major": "yarn version --new-version major",
+    "version:prepatch": "yarn version --new-version prepatch"
   },
   "repository": {
     "type": "git",
