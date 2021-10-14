@@ -7,6 +7,7 @@
     "test": "jest",
     "lint": "flow && documentation lint index.js",
     "docs": "documentation build index.js -o docs --config documentation.yml -f html",
+    "git:push": "git push --follow-tags",
     "publish:patch": "run-s version:patch git:push",
     "publish:minor": "run-s version:minor git:push",
     "publish:major": "run-s version:major git:push",
